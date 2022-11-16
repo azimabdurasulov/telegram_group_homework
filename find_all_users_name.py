@@ -11,7 +11,7 @@ def find_all_users_name(data: dict)->list:
     """
     sum = []
     for msg in data["messages"]:
-        name = msg.get("from", False)
+        name = msg.get("actor", False)
         if name:
             if name not in sum:
                 sum.append(name)
